@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="ru.stazaev.entity">
+    <class name="Worker" table="workers" >
+        <id name="id" type="long">
+            <column name="id_worker" />
+            <generator class="identity" />
+        </id>
+        <set name="flats" table="flats" fetch="select">
+            <key>
+                <column name="id_worker" not-null="true"></column>
+            </key>
+            <one-to-many class="Flat"/>
+        </set>
+    </class>
+
+    <class name="Flat" table="flats">
+        <id name="id" type="long">
+            <column name="id_flat" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="worker" class="Worker">
+            <column name="id_worker" not-null="true"></column>
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>
