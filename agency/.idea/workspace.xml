@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f71a51b9-d23c-4658-bc9e-4ff37fc1ba65" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1b717cb7-591b-4197-b4c7-bee01147a645.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1b717cb7-591b-4197-b4c7-bee01147a645.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1b717cb7-591b-4197-b4c7-bee01147a645/storage_v2/_src_/database/agency.BRxhqw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1b717cb7-591b-4197-b4c7-bee01147a645/storage_v2/_src_/database/agency.BRxhqw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/DAO/WorkerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/DAO/WorkerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Flat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Flat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/WorkerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/WorkerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/Auto.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/DAO/WorkerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/DAO/WorkerDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/UserService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Flat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Flat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Worker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Worker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/hibernateUtil/HibernateSessionFactoryUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/hibernateUtil/HibernateSessionFactoryUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/service/WorkerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/service/WorkerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/worker.hbm.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668349404921</updated>
-      <workItem from="1668349406489" duration="24394000" />
+      <workItem from="1668349406489" duration="28321000" />
     </task>
     <servers />
   </component>
@@ -127,5 +119,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/stazaev/DAO/WorkerDAO.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/stazaev/service/Service.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -27,7 +27,7 @@ public class Flat {
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="id_worker")
-    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
     private Worker worker;
 
     public Flat() {

@@ -23,12 +23,18 @@ public class Application {
                     service.addWorker(name,telephone);
                     System.out.println("added");
                 }
-
-                case "3" -> System.out.println(3);
-                case "4" -> System.out.println(4);
-                case "5" -> System.out.println(5);
-                case "6" -> System.out.println(6);
-                case "7" -> System.out.println(7);
+                case "3" -> {
+                    System.out.println("добавить квартиру");
+                    System.out.println("id работника");
+                    long id = scanner.nextInt();
+                    service.addNewFlat(id,"adr",4,80,3);
+                    System.out.println("suc");
+                }
+                case "4" -> System.out.println("все квартиры");
+                case "5" -> System.out.println("провести сделку");
+                case "6" -> System.out.println("все сделки");
+                case "7" -> System.out.println("все клиенты");
+                case "8" -> System.out.println("клиент + хотелка");
                 case "99" -> {
                     return;
                 }

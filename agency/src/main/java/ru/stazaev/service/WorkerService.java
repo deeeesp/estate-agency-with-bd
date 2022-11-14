@@ -2,6 +2,7 @@ package ru.stazaev.service;
 
 import org.hibernate.SessionFactory;
 import ru.stazaev.DAO.WorkerDAO;
+import ru.stazaev.entity.Flat;
 import ru.stazaev.entity.Worker;
 
 import java.util.List;
@@ -19,7 +20,6 @@ public class WorkerService {
 //        worker.setWorkerName(name);
 //        worker.setTelephoneNumber(telephone);
         workerDAO.save(worker);
-
     }
 
     public void update(Worker worker){
@@ -35,5 +35,9 @@ public class WorkerService {
 
     public List<Worker> getWorkersList(){
         return workerDAO.findAll();
+    }
+
+    public List<Flat> getFlats(long id){
+        return workerDAO.getFlats(id);
     }
 }

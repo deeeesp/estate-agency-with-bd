@@ -3,6 +3,7 @@ package ru.stazaev.DAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import ru.stazaev.entity.Flat;
 import ru.stazaev.entity.Worker;
 
 import java.util.List;
@@ -19,6 +20,15 @@ public class WorkerDAO {
         Worker worker = session.get(Worker.class, id);
         session.close();
         return worker;
+    }
+
+    public List<Flat> getFlats(long id){
+        Session session =  sessionFactory.openSession();
+        Worker worker = session.get(Worker.class, id);
+        List<Flat> flats = worker.getFlats();
+//        System.out.println(flats);
+        session.close();
+        return flats;
     }
 
     public void save(Worker worker) {

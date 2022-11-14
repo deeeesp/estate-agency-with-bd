@@ -1,6 +1,7 @@
 package ru.stazaev.service;
 
 import org.hibernate.SessionFactory;
+import ru.stazaev.entity.Flat;
 import ru.stazaev.entity.Worker;
 
 import java.util.List;
@@ -23,5 +24,16 @@ public class Service {
 
     public void addWorker(String name, String telephone) {
         workerService.saveWorker(name,telephone);
+    }
+
+    public void addNewFlat(long id, String address, int floor, int meters, int rooms) {
+        Worker worker = workerService.getWorker(id);
+        Flat flat = new Flat(address,floor,meters,rooms);
+        flat.setWorker(worker);
+//        System.out.println(workerService.getFlats(id));
+        worker.addFlat(flat);
+        workerService.update(worker);
+        flatService.saveFlat(flat);
+
     }
 }

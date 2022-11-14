@@ -1,7 +1,9 @@
 package ru.stazaev.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,17 +20,18 @@ public class Worker {
     @Column(name = "telephone_number")
     private String telephoneNumber;
 
-    @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Flat> flats;
+    @OneToMany(mappedBy = "worker", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
+    private List<Flat> flats;
 
 
     public Worker() {
+        this.flats = new ArrayList<>();
     }
 
     public Worker(String workerName, String telephoneNumber) {
         this.workerName = workerName;
         this.telephoneNumber = telephoneNumber;
-        flats = new HashSet<>();
+        flats = new ArrayList<>();
     }
 
     public long getId() {
@@ -51,21 +54,18 @@ public class Worker {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public Set<Flat> getFlats() {
+    public List<Flat> getFlats() {
         return flats;
     }
 
-    public void setFlats(Set<Flat> flats) {
+    public void setFlats(List<Flat> flats) {
         this.flats = flats;
     }
 
-    @Override
-    public String toString() {
-        return "Worker{" +
-                "id=" + id +
-                ", workerName='" + workerName + '\'' +
-                ", telephoneNumber='" + telephoneNumber + '\'' +
-                ", flats=" + flats +
-                '}';
+    public void addFlat(Flat flat){
+        flat.setWorker(this);
+        flats.add(flat);
     }
+
+
 }
