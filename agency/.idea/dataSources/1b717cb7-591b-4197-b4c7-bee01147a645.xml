@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.40">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>1044</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1069</IntrospectionStateNumber>
       <ServerVersion>15.0</ServerVersion>
       <StartupTime>1668260064</StartupTime>
       <TimeZones>true ACDT
@@ -799,7 +799,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>1044</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1069</IntrospectionStateNumber>
       <ObjectId>16709</ObjectId>
       <Relations>sequence|table|16710|16711|1
 sequence|table|16719|16721|1
@@ -4240,7 +4240,7 @@ sequence|table|16788|16789|4
     <schema id="266" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1044</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1069</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4418,11 +4418,12 @@ sequence|table|16788|16789|4
     <foreign-key id="293" parent="278" name="deals_id_worker_fkey">
       <ColNames>id_worker</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16800</ObjectId>
+      <ObjectId>16870</ObjectId>
       <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_worker</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>985</StateNumber>
+      <StateNumber>1067</StateNumber>
       <RefTableId>16711</RefTableId>
       <RefTableName>workers</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4430,11 +4431,12 @@ sequence|table|16788|16789|4
     <foreign-key id="294" parent="278" name="deals_id_flat_fkey">
       <ColNames>id_flat</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16805</ObjectId>
+      <ObjectId>16865</ObjectId>
       <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_flat</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>985</StateNumber>
+      <StateNumber>1064</StateNumber>
       <RefTableId>16721</RefTableId>
       <RefTableName>flats</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4442,11 +4444,12 @@ sequence|table|16788|16789|4
     <foreign-key id="295" parent="278" name="deals_id_client_fkey">
       <ColNames>id_client</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16810</ObjectId>
+      <ObjectId>16860</ObjectId>
       <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_client</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>985</StateNumber>
+      <StateNumber>1061</StateNumber>
       <RefTableId>16761</RefTableId>
       <RefTableName>clients</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4510,11 +4513,12 @@ sequence|table|16788|16789|4
     <foreign-key id="304" parent="279" name="flats_id_worker_fkey">
       <ColNames>id_worker</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16730</ObjectId>
+      <ObjectId>16850</ObjectId>
       <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_worker</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>978</StateNumber>
+      <StateNumber>1055</StateNumber>
       <RefTableId>16711</RefTableId>
       <RefTableName>workers</RefTableName>
       <RefTableKind>table</RefTableKind>
@@ -4572,11 +4576,12 @@ sequence|table|16788|16789|4
     <foreign-key id="312" parent="280" name="wishes_id_client_fkey">
       <ColNames>id_client</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16780</ObjectId>
+      <ObjectId>16855</ObjectId>
       <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_client</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>983</StateNumber>
+      <StateNumber>1058</StateNumber>
       <RefTableId>16761</RefTableId>
       <RefTableName>clients</RefTableName>
       <RefTableKind>table</RefTableKind>

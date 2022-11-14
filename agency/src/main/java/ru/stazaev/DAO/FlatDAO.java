@@ -3,50 +3,51 @@ package ru.stazaev.DAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import ru.stazaev.entity.Flat;
 import ru.stazaev.entity.Worker;
 
 import java.util.List;
 
-public class WorkerDAO {
+public class FlatDAO {
     private SessionFactory sessionFactory;
 
-    public WorkerDAO(SessionFactory sessionFactory) {
+    public FlatDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    public Worker findById(long id) {
-        Session session =  sessionFactory.openSession();
-        Worker worker = session.get(Worker.class, id);
+    public Flat findById(long id) {
+        Session session = sessionFactory.openSession();
+        Flat flat = session.get(Flat.class, id);
         session.close();
-        return worker;
+        return flat;
     }
 
-    public void save(Worker worker) {
+    public void save(Flat flat) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(worker);
+        session.save(flat);
         tx1.commit();
         session.close();
     }
 
-    public void update(Worker worker) {
+    public void update(Flat flat) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(worker);
+        session.update(flat);
         tx1.commit();
         session.close();
     }
 
-    public void delete(Worker worker) {
+    public void delete(Flat flat) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(worker);
+        session.delete(flat);
         tx1.commit();
         session.close();
     }
 
-    public List<Worker> findAll() {
+    public List<Flat> findAll() {
 //        List<Worker> workers = (List<Worker>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From Worker").list();
-        return  sessionFactory.openSession().createQuery("From Worker").list();
+        return  sessionFactory.openSession().createQuery("From Flat").list();
     }
 }

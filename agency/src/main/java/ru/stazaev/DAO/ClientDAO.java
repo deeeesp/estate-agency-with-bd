@@ -3,50 +3,50 @@ package ru.stazaev.DAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import ru.stazaev.entity.Worker;
+import ru.stazaev.entity.Client;
 
 import java.util.List;
 
-public class WorkerDAO {
+public class ClientDAO {
     private SessionFactory sessionFactory;
 
-    public WorkerDAO(SessionFactory sessionFactory) {
+    public ClientDAO(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
-    public Worker findById(long id) {
-        Session session =  sessionFactory.openSession();
-        Worker worker = session.get(Worker.class, id);
+    public Client findById(long id) {
+        Session session = sessionFactory.openSession();
+        Client client = session.get(Client.class, id);
         session.close();
-        return worker;
+        return client;
     }
 
-    public void save(Worker worker) {
+    public void save(Client client) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.save(worker);
+        session.save(client);
         tx1.commit();
         session.close();
     }
 
-    public void update(Worker worker) {
+    public void update(Client client) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.update(worker);
+        session.update(client);
         tx1.commit();
         session.close();
     }
 
-    public void delete(Worker worker) {
+    public void delete(Client client) {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
-        session.delete(worker);
+        session.delete(client);
         tx1.commit();
         session.close();
     }
 
-    public List<Worker> findAll() {
+    public List<Client> findAll() {
 //        List<Worker> workers = (List<Worker>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From Worker").list();
-        return  sessionFactory.openSession().createQuery("From Worker").list();
+        return sessionFactory.openSession().createQuery("From Client").list();
     }
 }
