@@ -5,6 +5,8 @@ import ru.stazaev.DAO.FlatDAO;
 import ru.stazaev.entity.Flat;
 import ru.stazaev.entity.Worker;
 
+import java.util.List;
+
 public class FlatService {
     private FlatDAO flatDAO;
 
@@ -24,5 +26,9 @@ public class FlatService {
 
     public void deleteFlat(Flat flat){
         flatDAO.delete(flat);
+    }
+
+    public List<Flat> getAllFlats() {
+        return flatDAO.findAll();
     }
 }

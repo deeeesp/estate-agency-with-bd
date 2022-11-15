@@ -28,6 +28,14 @@ public class Deal {
     public Deal() {
     }
 
+    public Deal(long workerId, long flatId, long client_id, String type, int cost) {
+        this.workerId = workerId;
+        this.flatId = flatId;
+        this.client_id = client_id;
+        this.type = type;
+        this.cost = cost;
+    }
+
     public long getId() {
         return id;
     }

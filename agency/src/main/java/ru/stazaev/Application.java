@@ -27,12 +27,21 @@ public class Application {
                     System.out.println("добавить квартиру");
                     System.out.println("id работника");
                     long id = scanner.nextInt();
-                    service.addNewFlat(id,"adr",4,80,3);
+                    service.addNewFlat(id,"adr",4,88,3);
                     System.out.println("suc");
                 }
-                case "4" -> System.out.println("все квартиры");
-                case "5" -> System.out.println("провести сделку");
-                case "6" -> System.out.println("все сделки");
+                case "4" -> {
+                    System.out.println("все квартиры");
+                    System.out.println(service.getAllFlats());
+                }
+                case "5" -> {
+                    System.out.println("провести сделку");
+                    service.addDeal(6,7,1,"buy",5000000);
+                }
+                case "6" -> {
+                    System.out.println("все сделки");
+                    System.out.println(service.getAllDeals());
+                }
                 case "7" -> System.out.println("все клиенты");
                 case "8" -> System.out.println("клиент + хотелка");
                 case "99" -> {

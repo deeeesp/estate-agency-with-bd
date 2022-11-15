@@ -84,4 +84,16 @@ public class Flat {
     public void setWorker(Worker worker) {
         this.worker = worker;
     }
+
+    @Override
+    public String toString() {
+        return "Flat{" +
+                "id=" + id +
+                ", address='" + address + '\'' +
+                ", floor=" + floor +
+                ", meters=" + meters +
+                ", roomsNumber=" + roomsNumber +
+                ", worker=" + worker +
+                '}';
+    }
 }
