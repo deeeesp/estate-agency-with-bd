@@ -1,9 +1,7 @@
 package ru.stazaev.service;
 
 import org.hibernate.SessionFactory;
-import ru.stazaev.entity.Deal;
-import ru.stazaev.entity.Flat;
-import ru.stazaev.entity.Worker;
+import ru.stazaev.entity.*;
 
 import java.util.List;
 
@@ -12,12 +10,14 @@ public class Service {
     private FlatService flatService;
     private WorkerService workerService;
     private DealService dealService;
+    private ClientService clientService;
 
     public Service(SessionFactory sessionFactory){
         this.sessionFactory = sessionFactory;
         this.workerService = new WorkerService(sessionFactory);
         this.flatService = new FlatService(sessionFactory);
         this.dealService = new DealService(sessionFactory);
+        this.clientService = new ClientService(sessionFactory);
     }
 
 
@@ -51,5 +51,27 @@ public class Service {
 
     public List<Deal> getAllDeals() {
         return dealService.getDeals();
+    }
+
+    public void addClient(String name, String telephone) {
+        Client client = new Client(name,telephone);
+        clientService.save(client);
+    }
+
+    public List<Client> getAllClients() {
+        return clientService.getAll();
+    }
+
+    public List<Wish> getClientWishes(long id) {
+        Client client = clientService.getById(id);
+        return client.getWishes();
+    }
+
+    public void addWish(long id, int cost, int meters, int rooms) {
+        Client client = clientService.getById(id);
+        Wish wish = new Wish(cost, meters, rooms);
+        wish.setClient(client);
+        client.addWishes(wish);
+        clientService.update(client);
     }
 }

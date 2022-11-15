@@ -1,7 +1,9 @@
 package ru.stazaev.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -18,14 +20,14 @@ public class Client {
     @Column(name = "telephone_number")
     private String telephoneNumber;
 
-    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Wish> wishes;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
+    private List<Wish> wishes;
 
 
     public Client(String name, String telephoneNumber) {
         this.name = name;
         this.telephoneNumber = telephoneNumber;
-        wishes = new HashSet<>();
+        wishes = new ArrayList<>();
     }
 
     public Client(){}
@@ -42,7 +44,7 @@ public class Client {
         return telephoneNumber;
     }
 
-    public Set<Wish> getWishes() {
+    public List<Wish> getWishes() {
         return wishes;
     }
 
@@ -54,7 +56,12 @@ public class Client {
         this.telephoneNumber = telephoneNumber;
     }
 
-    public void setWishes(Set<Wish> wishes) {
+    public void setWishes(List<Wish> wishes) {
         this.wishes = wishes;
+    }
+
+    public void addWishes(Wish wish){
+        wish.setClient(this);
+        wishes.add(wish);
     }
 }

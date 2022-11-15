@@ -30,6 +30,13 @@ public class Wish {
     public Wish() {
     }
 
+    public Wish(int cost, int meters, int roomsNumber) {
+        this.cost = cost;
+        this.meters = meters;
+        this.roomsNumber = roomsNumber;
+//        this.client = client;
+    }
+
     public long getId() {
         return id;
     }

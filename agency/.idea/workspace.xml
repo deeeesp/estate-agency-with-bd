@@ -7,11 +7,11 @@
     <list default="true" id="f71a51b9-d23c-4658-bc9e-4ff37fc1ba65" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Deal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Deal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Flat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Flat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/FlatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/FlatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Wish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/entity/Wish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/stazaev/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Flat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Flat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Deal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/stazaev/entity/Deal.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668349404921</updated>
-      <workItem from="1668349406489" duration="30287000" />
+      <workItem from="1668349406489" duration="33551000" />
     </task>
     <servers />
   </component>

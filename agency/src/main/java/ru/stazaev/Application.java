@@ -37,18 +37,39 @@ public class Application {
                 case "5" -> {
                     System.out.println("провести сделку");
                     service.addDeal(6,7,1,"buy",5000000);
+                    System.out.println("added");
                 }
                 case "6" -> {
                     System.out.println("все сделки");
                     System.out.println(service.getAllDeals());
                 }
-                case "7" -> System.out.println("все клиенты");
-                case "8" -> System.out.println("клиент + хотелка");
+                case "7" -> {
+                    System.out.println("добавить клиента");
+                    service.addClient("name","423");
+                }
+                case "8" -> {
+                    System.out.println("все клиенты");
+                    System.out.println(service.getAllClients());
+                }
+                case "9" -> {
+                    System.out.println("клиент + хотелка");
+                    System.out.println("id клиента");
+                    long id = scanner.nextInt();
+                    System.out.println(service.getClientWishes(id));
+                }
+                case "10" -> {
+                    System.out.println("добавить хотелку");
+                    System.out.println("клиент + хотелка");
+                    System.out.println("id клиента");
+                    long id = scanner.nextInt();
+                    service.addWish(id,100000000,45,1);
+                }
                 case "99" -> {
                     return;
                 }
                 default -> System.out.println("def");
             }
+            System.out.println("успешно");
         }
     }
 }
